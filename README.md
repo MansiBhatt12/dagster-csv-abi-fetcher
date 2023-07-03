@@ -2,8 +2,8 @@
 
 This Dagster project demonstrates a data pipeline that reads contract addresses from a CSV file which contain 500 contract addresses, fetches API data for each address, and saves the results into another CSV file. The project consists of the following files:
 
-asset.py :  This file contains the code to fetch the APIs and also defines asset.
-__init__.py : This file defines the jobs ans schedules that are used by the project.
+* asset.py :  This file contains the code to fetch the APIs and also defines asset.
+* __init__.py : This file defines the jobs ans schedules that are used by the project.
 
 ## Features
 
