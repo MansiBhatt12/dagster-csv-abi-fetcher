@@ -1,48 +1,39 @@
-# fetch_csv_project
+# Dagster Project: Fetch APIs from CSV File and Save into CSV File
 
-This is a [Dagster](https://dagster.io/) project scaffolded with [`dagster project scaffold`](https://docs.dagster.io/getting-started/create-new-project).
+This Dagster project demonstrates a data pipeline that reads contract addresses from a CSV file which contain 500 contract addresses, fetches API data for each address, and saves the results into another CSV file. The project consists of the following files:
 
-## Getting started
+asset.py :  This file contains the code to fetch the APIs and also defines asset.
+__init__.py : This file defines the jobs ans schedules that are used by the project.
 
-First, install your Dagster code location as a Python package. By using the --editable flag, pip will install your Python package in ["editable mode"](https://pip.pypa.io/en/latest/topics/local-project-installs/#editable-installs) so that as you develop, local code changes will automatically apply.
+## Features
 
+* The project can fetch APIs for 5 contract addresses.
+* The data is saved to a CSV file.
+* The project includes scheduled pipeline, a predefined job and schedule to run the pipeline every hour. 
+* The project uses the File System I/O Manager to store the fetched data in a directory called 'data' in your file system to a more permanent location. 
+
+## Setup
+
+To run the project, you will need to have Dagster installed (installation instructions: https://docs.dagster.io/getting_started/installation). Once you have Dagster installed in your python local environment, you can run the project by following these steps:
+
+1. Clone the repository or download the project files.
+   
+2. Install the dependencies
 ```bash
 pip install -e ".[dev]"
 ```
+* Note: Don't forget to import, install necessary packages
+```bash
+pip install package_name
+```
+3. The input CSV file is already placed in the data directory named address.csv, this CSV file contains one column named "ADDRESS" that holds the contract addresses.
 
-Then, start the Dagster UI web server:
-
+4. Run the command
 ```bash
 dagster dev
 ```
 
-Open http://localhost:3000 with your browser to see the project.
-
-You can start writing assets in `fetch_csv_project/assets.py`. The assets are automatically loaded into the Dagster code location as you define them.
-
-## Development
+This will start the Dagster UI on your local machine. You can then use the UI to interact with the project.
 
 
-### Adding new Python dependencies
 
-You can specify new Python dependencies in `setup.py`.
-
-### Unit testing
-
-Tests are in the `fetch_csv_project_tests` directory and you can run tests using `pytest`:
-
-```bash
-pytest fetch_csv_project_tests
-```
-
-### Schedules and sensors
-
-If you want to enable Dagster [Schedules](https://docs.dagster.io/concepts/partitions-schedules-sensors/schedules) or [Sensors](https://docs.dagster.io/concepts/partitions-schedules-sensors/sensors) for your jobs, the [Dagster Daemon](https://docs.dagster.io/deployment/dagster-daemon) process must be running. This is done automatically when you run `dagster dev`.
-
-Once your Dagster Daemon is running, you can start turning on schedules and sensors for your jobs.
-
-## Deploy on Dagster Cloud
-
-The easiest way to deploy your Dagster project is to use Dagster Cloud.
-
-Check out the [Dagster Cloud Documentation](https://docs.dagster.cloud) to learn more.
