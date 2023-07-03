@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+fetch_csv_project/__init__.py
+fetch_csv_project/assets.py
+fetch_csv_project.egg-info/PKG-INFO
+fetch_csv_project.egg-info/SOURCES.txt
+fetch_csv_project.egg-info/dependency_links.txt
+fetch_csv_project.egg-info/requires.txt
+fetch_csv_project.egg-info/top_level.txt
