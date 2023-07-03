@@ -5,13 +5,6 @@ This Dagster project demonstrates a data pipeline that reads contract addresses 
 * asset.py :  This file contains the code to fetch the APIs and also defines asset.
 * __init__.py : This file defines the jobs ans schedules that are used by the project.
 
-## Features
-
-* The project can fetch APIs for 5 contract addresses.
-* The data is saved to a CSV file.
-* The project includes scheduled pipeline, a predefined job and schedule to run the pipeline every hour. 
-* The project uses the File System I/O Manager to store the fetched data in a directory called 'data' in your file system to a more permanent location. 
-
 ## Setup
 
 To run the project, you will need to have Dagster installed (installation instructions: https://docs.dagster.io/getting_started/installation). Once you have Dagster installed in your python local environment, you can run the project by following these steps:
@@ -32,8 +25,8 @@ pip install package_name
 ```bash
 dagster dev
 ```
-
 This will start the Dagster UI on your local machine. You can then use the UI to interact with the project.
 
+Open your web browser and navigate to http://localhost:3000 to access the Dagster UI.
 
-
+Click on the Materialize in the Dagster UI and execute it. Monitor the pipeline execution in the Dagster web UI. Once completed, the fetch_api.csv file in the data directory will contain the fetched API data. 
