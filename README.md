@@ -1,8 +1,8 @@
-# Dagster Project: Fetch APIs from CSV File and Save into CSV File
+# Dagster Project: Fetch ABIs from CSV File and Save into CSV File
 
-This Dagster project demonstrates a data pipeline that reads contract addresses from a CSV file which contain 500 contract addresses, fetches API data for each address, and saves the results into another CSV file. The project consists of the following files:
+This Dagster project demonstrates a data pipeline that reads contract addresses from a CSV file which contain 500 contract addresses, fetches ABI data for each address, and saves the results into another CSV file. The project consists of the following files:
 
-* asset.py :  This file contains the code to fetch the APIs and also defines asset.
+* asset.py :  This file contains the code to fetch the ABIs and also defines asset.
 * __init__.py : This file defines the jobs ans schedules that are used by the project.
 
 ## Setup
@@ -29,4 +29,4 @@ This will start the Dagster UI on your local machine. You can then use the UI to
 
 Open your web browser and navigate to http://localhost:3000 to access the Dagster UI.
 
-Click on the Materialize in the Dagster UI and execute it. Monitor the pipeline execution in the Dagster web UI. Once completed, the fetch_api.csv file in the data directory will contain the fetched API data. 
+Click on the Materialize in the Dagster UI and execute it. Monitor the pipeline execution in the Dagster web UI. Once completed, the fetch_api.csv file in the data directory will contain the fetched ABI data. 
